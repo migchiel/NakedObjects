@@ -13,7 +13,8 @@ BaselineOfRSNakedObjects >> baseline: spec [
 			self setUpDependencies: spec.
 			spec
 				package: 'RSNakedObjects'
-				with: [ spec requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' ) ];
+				with: [ spec requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' );
+								 postLoadDoIt: #startSeasideAdaptorInPharo];
 				package: 'RSNakedObjects-Tests'
 				with: [ spec requires: #( 'RSNakedObjects' ) ];
 				group: 'Core' with: #( 'RSNakedObjects' ) ]
@@ -39,4 +40,13 @@ BaselineOfRSNakedObjects >> setUpDependencies: spec [
 			spec
 				loads: #( 'core' );
 				repository: 'github://svenvc/NeoCSV/repository' ]
+]
+
+{ #category : 'as yet unclassified' }
+BaselineOfRSNakedObjects >> startSeasideAdaptorInPharo [
+
+	(Smalltalk globals at: #WAAdmin) defaultServerManager adaptors
+		ifEmpty: [
+				(Smalltalk globals includesKey: #ZnZincServerAdaptor) ifTrue: [
+					(Smalltalk globals at: #ZnZincServerAdaptor) startOn: 8080 ] ]
 ]
