@@ -34,7 +34,6 @@ MainPage >> initialize [
 MainPage >> renderContentOn: html [
 
 	html render: header.
-	html break;break.
-	RSRoot allSubclasses do: [ :object | html text: object name;break;break ].
+	html render: coreObjects.
 	html render: footer
 ]

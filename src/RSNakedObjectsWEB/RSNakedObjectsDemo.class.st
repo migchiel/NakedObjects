@@ -39,3 +39,11 @@ RSNakedObjectsDemo >> renderContentOn: html [
 
 	html render: mainPage 
 ]
+
+{ #category : 'updating' }
+RSNakedObjectsDemo >> updateRoot: anHtmlRoot [
+
+	super updateRoot: anHtmlRoot.
+	anHtmlRoot beHtml5.
+	anHtmlRoot title: 'Naked Objects Demo'
+]

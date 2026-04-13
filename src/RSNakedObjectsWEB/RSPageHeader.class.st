@@ -8,5 +8,6 @@ Class {
 
 { #category : 'rendering' }
 RSPageHeader >> renderContentOn: html [
-   html text: ' HEADER '
+
+	html text: ' HEADER ';break;break
 ]

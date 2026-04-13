@@ -8,9 +8,12 @@ Class {
 
 { #category : 'rendering' }
 RSCoreObjects >> renderContentOn: html [
-
-	RSRoot allSubclasses do: [ :object |
+	| rootClasses |
+	rootClasses :=  RSRoot allSubclasses.
+	
+	rootClasses allButLastDo: [ :object |
 			html
-				text: object name;
-				break ].
+				text: object name;break ].
+	html text: rootClasses last name
+			
 ]

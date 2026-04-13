@@ -8,6 +8,6 @@ Class {
 
 { #category : 'rendering' }
 RSPageFooter >> renderContentOn: html [
-
-	html text: ' FOOTER '
+	
+	html break;break;text: ' FOOTER '
 ]
