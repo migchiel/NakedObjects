@@ -1,6 +1,6 @@
 Class {
-	#name : 'RSTeam',
-	#superclass : 'RSRoot',
+	#name : 'RSRoot',
+	#superclass : 'Object',
 	#category : 'RSNakedObjects-Core',
 	#package : 'RSNakedObjects',
 	#tag : 'Core'

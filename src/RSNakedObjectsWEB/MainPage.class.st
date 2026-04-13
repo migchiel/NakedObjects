@@ -1,7 +1,40 @@
 Class {
 	#name : 'MainPage',
-	#superclass : 'Object',
+	#superclass : 'WAComponent',
+	#instVars : [
+		'header',
+		'footer',
+		'coreObjects'
+	],
 	#category : 'RSNakedObjectsWEB-pages',
 	#package : 'RSNakedObjectsWEB',
 	#tag : 'pages'
 }
+
+{ #category : 'hooks' }
+MainPage >> children [
+
+	^ OrderedCollection withAll: {
+			 	header.
+			 	footer.
+				coreObjects }
+]
+
+{ #category : 'initialization' }
+MainPage >> initialize [
+
+	super initialize.
+	header := RSPageHeader new.
+	coreObjects := RSCoreObjects new.
+	footer := RSPageFooter new.
+	
+]
+
+{ #category : 'rendering' }
+MainPage >> renderContentOn: html [
+
+	html render: header.
+	html break;break.
+	RSRoot allSubclasses do: [ :object | html text: object name;break;break ].
+	html render: footer
+]

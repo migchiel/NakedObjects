@@ -1,6 +1,9 @@
 Class {
 	#name : 'RSNakedObjectsDemo',
 	#superclass : 'WAComponent',
+	#instVars : [
+		'mainPage'
+	],
 	#category : 'RSNakedObjectsWEB-application',
 	#package : 'RSNakedObjectsWEB',
 	#tag : 'application'
@@ -18,7 +21,21 @@ RSNakedObjectsDemo class >> initialize [
    
 ]
 
+{ #category : 'hooks' }
+RSNakedObjectsDemo >> children [
+
+	^ OrderedCollection with: mainPage 
+]
+
+{ #category : 'initialization' }
+RSNakedObjectsDemo >> initialize [ 
+
+	super initialize.
+	mainPage := MainPage new
+]
+
 { #category : 'rendering' }
 RSNakedObjectsDemo >> renderContentOn: html [
-   html text: 'NakedObjectsDemo'
+
+	html render: mainPage 
 ]
