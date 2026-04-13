@@ -9,5 +9,8 @@ Class {
 { #category : 'rendering' }
 RSPageHeader >> renderContentOn: html [
 
-	html text: ' HEADER ';break;break
+	super renderContentOn: html.
+	html heading level: 1;with: ' HEADER '.
+	html	break;
+		break
 ]

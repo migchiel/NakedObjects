@@ -8,6 +8,11 @@ Class {
 
 { #category : 'rendering' }
 RSPageFooter >> renderContentOn: html [
-	
-	html break;break;text: ' FOOTER '
+
+	super renderContentOn: html.
+	html
+		break;
+		break.
+	html
+		heading level: 1;with: ' FOOTER '
 ]
