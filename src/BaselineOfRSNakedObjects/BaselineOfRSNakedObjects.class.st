@@ -12,9 +12,13 @@ BaselineOfRSNakedObjects >> baseline: spec [
 	spec for: #common do: [
 			self setUpDependencies: spec.
 			spec
-				package: 'RSNakedObjects'
-				with: [ spec requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' );
-								 postLoadDoIt: #startSeasideAdaptorInPharo];
+				package: 'RSNakedObjects' with: [
+						spec
+							requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' );
+							postLoadDoIt: #startSeasideAdaptorInPharo ];
+				package: 'RSNakedObjectsWEB' with: [ 
+						spec requires: #('Seaside3')
+					 ];
 				package: 'RSNakedObjects-Tests'
 				with: [ spec requires: #( 'RSNakedObjects' ) ];
 				group: 'Core' with: #( 'RSNakedObjects' ) ]
