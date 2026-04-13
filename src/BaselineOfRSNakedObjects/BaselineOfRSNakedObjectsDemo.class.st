@@ -1,12 +1,12 @@
 Class {
-	#name : 'BaselineOfNakedObjectsDemo',
+	#name : 'BaselineOfRSNakedObjectsDemo',
 	#superclass : 'BaselineOf',
-	#category : 'BaselineOfNakedObjects',
-	#package : 'BaselineOfNakedObjects'
+	#category : 'BaselineOfRSNakedObjects',
+	#package : 'BaselineOfRSNakedObjects'
 }
 
 { #category : 'baselines' }
-BaselineOfNakedObjectsDemo >> baseline: spec [
+BaselineOfRSNakedObjectsDemo >> baseline: spec [
 
 	<baseline>
 	spec for: #common do: [
@@ -20,7 +20,7 @@ BaselineOfNakedObjectsDemo >> baseline: spec [
 ]
 
 { #category : 'initialization' }
-BaselineOfNakedObjectsDemo >> setUpDependencies: spec [
+BaselineOfRSNakedObjectsDemo >> setUpDependencies: spec [
 
 	spec
 		baseline: 'ZTimestamp' with: [
