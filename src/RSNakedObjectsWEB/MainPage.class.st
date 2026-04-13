@@ -15,9 +15,9 @@ Class {
 MainPage >> children [
 
 	^ OrderedCollection withAll: {
-			 	header.
-			 	footer.
-				coreObjects }
+			  header.
+			  coreObjects.
+			  footer }
 ]
 
 { #category : 'initialization' }
@@ -33,7 +33,5 @@ MainPage >> initialize [
 { #category : 'rendering' }
 MainPage >> renderContentOn: html [
 
-	html render: header.
-	html render: coreObjects.
-	html render: footer
+	self children do: [ :child | html render: child ]
 ]
