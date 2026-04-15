@@ -11,6 +11,7 @@ RSPageHeader >> renderContentOn: html [
 
 	super renderContentOn: html.
 	html heading level: 1;with: ' HEADER '.
-	html	break;
+	html	
+		horizontalRule;
 		break
 ]

@@ -10,9 +10,11 @@ Class {
 RSPageFooter >> renderContentOn: html [
 
 	super renderContentOn: html.
+	
 	html
 		break;
-		break.
+		break;
+		horizontalRule.
 	html
 		heading level: 1;with: ' FOOTER '
 ]

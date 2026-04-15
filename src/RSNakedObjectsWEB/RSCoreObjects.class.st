@@ -13,9 +13,8 @@ RSCoreObjects >> renderContentOn: html [
 	rootClasses := RSRoot allSubclasses.
 
 	super renderContentOn: html.
-	rootClasses allButLastDo: [ :object |
-			html
-				text: object name;
-				break ].
-	html text: rootClasses last name
+	rootClasses do: [ :object |
+			html div: [ html anchor
+       callback: [ Smalltalk beep ];
+       with: [ html heading level: 2; with: object name ]]]
 ]
