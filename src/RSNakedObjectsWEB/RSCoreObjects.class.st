@@ -1,20 +1,27 @@
 Class {
 	#name : 'RSCoreObjects',
 	#superclass : 'WAComponent',
+	#instVars : [
+		'rootClasses'
+	],
 	#category : 'RSNakedObjectsWEB-components',
 	#package : 'RSNakedObjectsWEB',
 	#tag : 'components'
 }
 
+{ #category : 'initialization' }
+RSCoreObjects >> initialize [
+	
+	super initialize.
+	rootClasses := RSRoot allSubclasses collect: [ :c |
+		               RSCoreObject withName: c name ]
+]
+
 { #category : 'rendering' }
 RSCoreObjects >> renderContentOn: html [
 
-	| rootClasses |
-	rootClasses := RSRoot allSubclasses.
-
 	super renderContentOn: html.
-	rootClasses do: [ :object |
-			html div: [ html anchor
-       callback: [ Smalltalk beep ];
-       with: [ html heading level: 2; with: object name ]]]
+	rootClasses
+		do: [ :each | html render: each ]
+		separatedBy: [ html horizontalRule ]
 ]

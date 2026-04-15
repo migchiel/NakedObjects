@@ -10,8 +10,9 @@ Class {
 RSPageHeader >> renderContentOn: html [
 
 	super renderContentOn: html.
-	html heading level: 1;with: ' HEADER '.
-	html	
-		horizontalRule;
-		break
+	html heading
+		level: 1;
+		with: ' HEADER '.
+	html
+		horizontalRule
 ]

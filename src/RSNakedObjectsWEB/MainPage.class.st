@@ -26,8 +26,7 @@ MainPage >> initialize [
 	super initialize.
 	header := RSPageHeader new.
 	coreObjects := RSCoreObjects new.
-	footer := RSPageFooter new.
-	
+	footer := RSPageFooter new
 ]
 
 { #category : 'rendering' }
