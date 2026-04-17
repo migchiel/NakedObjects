@@ -6,8 +6,8 @@ Class {
 		'footer',
 		'coreObjects'
 	],
-	#category : 'RSNakedObjectsWEB-pages',
-	#package : 'RSNakedObjectsWEB',
+	#category : 'FRLNakedObjectsWEB-pages',
+	#package : 'FRLNakedObjectsWEB',
 	#tag : 'pages'
 }
 
@@ -24,9 +24,9 @@ MainPage >> children [
 MainPage >> initialize [
 
 	super initialize.
-	header := RSPageHeader new.
-	coreObjects := RSCoreObjects new.
-	footer := RSPageFooter new.
+	header := FRLPageHeader new.
+	coreObjects := FRLCoreObjects new.
+	footer := FRLPageFooter new.
 	
 ]
 

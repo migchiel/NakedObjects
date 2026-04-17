@@ -1,13 +1,13 @@
 Class {
-	#name : 'RSPageFooter',
+	#name : 'FRLPageFooter',
 	#superclass : 'WAComponent',
-	#category : 'RSNakedObjectsWEB-components',
-	#package : 'RSNakedObjectsWEB',
+	#category : 'FRLNakedObjectsWEB-components',
+	#package : 'FRLNakedObjectsWEB',
 	#tag : 'components'
 }
 
 { #category : 'rendering' }
-RSPageFooter >> renderContentOn: html [
+FRLPageFooter >> renderContentOn: html [
 
 	super renderContentOn: html.
 	html

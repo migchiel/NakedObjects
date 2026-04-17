@@ -1,7 +1,0 @@
-Class {
-	#name : 'RSTeam',
-	#superclass : 'RSRoot',
-	#category : 'RSNakedObjects-Core',
-	#package : 'RSNakedObjects',
-	#tag : 'Core'
-}

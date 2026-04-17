@@ -1,47 +1,47 @@
 Class {
-	#name : 'RSNakedObjectsDemo',
+	#name : 'FRLNakedObjectsDemo',
 	#superclass : 'WAComponent',
 	#instVars : [
 		'mainPage'
 	],
-	#category : 'RSNakedObjectsWEB-application',
-	#package : 'RSNakedObjectsWEB',
+	#category : 'FRLNakedObjectsWEB-application',
+	#package : 'FRLNakedObjectsWEB',
 	#tag : 'application'
 }
 
 { #category : 'testing' }
-RSNakedObjectsDemo class >> canBeRoot [
+FRLNakedObjectsDemo class >> canBeRoot [
    ^ true
 ]
 
 { #category : 'class initialization' }
-RSNakedObjectsDemo class >> initialize [ 
+FRLNakedObjectsDemo class >> initialize [ 
 
 	WAAdmin register: self asApplicationAt: 'NakedObjectsDemo'.
    
 ]
 
 { #category : 'hooks' }
-RSNakedObjectsDemo >> children [
+FRLNakedObjectsDemo >> children [
 
 	^ OrderedCollection with: mainPage 
 ]
 
 { #category : 'initialization' }
-RSNakedObjectsDemo >> initialize [ 
+FRLNakedObjectsDemo >> initialize [ 
 
 	super initialize.
 	mainPage := MainPage new
 ]
 
 { #category : 'rendering' }
-RSNakedObjectsDemo >> renderContentOn: html [
+FRLNakedObjectsDemo >> renderContentOn: html [
 
 	html render: mainPage 
 ]
 
 { #category : 'updating' }
-RSNakedObjectsDemo >> updateRoot: anHtmlRoot [
+FRLNakedObjectsDemo >> updateRoot: anHtmlRoot [
 
 	super updateRoot: anHtmlRoot.
 	anHtmlRoot beHtml5.

@@ -1,8 +1,8 @@
 Class {
 	#name : 'BaselineOfRSNakedObjects',
 	#superclass : 'BaselineOf',
-	#category : 'BaselineOfRSNakedObjects',
-	#package : 'BaselineOfRSNakedObjects'
+	#category : 'BaselineOfFRLNakedObjects',
+	#package : 'BaselineOfFRLNakedObjects'
 }
 
 { #category : 'baselines' }
@@ -12,16 +12,15 @@ BaselineOfRSNakedObjects >> baseline: spec [
 	spec for: #common do: [
 			self setUpDependencies: spec.
 			spec
-				package: 'RSNakedObjects' with: [
+				package: 'FRLNakedObjects' with: [
 						spec
 							requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' );
 							postLoadDoIt: #startSeasideAdaptorInPharo ];
-				package: 'RSNakedObjectsWEB' with: [ 
-						spec requires: #('Seaside3')
-					 ];
-				package: 'RSNakedObjects-Tests'
-				with: [ spec requires: #( 'RSNakedObjects' ) ];
-				group: 'Core' with: #( 'RSNakedObjects' ) ]
+				package: 'FRLNakedObjectsWEB'
+				with: [ spec requires: #( 'Seaside3' ) ];
+				package: 'FRLNakedObjects-Tests'
+				with: [ spec requires: #( 'FRLNakedObjects' ) ];
+				group: 'Core' with: #( 'FRLNakedObjects' ) ]
 ]
 
 { #category : 'initialization' }

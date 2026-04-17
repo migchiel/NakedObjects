@@ -4,6 +4,6 @@ A NakedObjectsDemoTest is a test class for testing the behavior of NakedObjectsD
 Class {
 	#name : 'NakedObjectsDemoTest',
 	#superclass : 'TestCase',
-	#category : 'RSNakedObjects-Tests',
-	#package : 'RSNakedObjects-Tests'
+	#category : 'FRLNakedObjects-Tests',
+	#package : 'FRLNakedObjects-Tests'
 }
