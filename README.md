@@ -9,6 +9,6 @@ You can load the code into Pharo using Metacello. The script below will load eve
 ```Smalltalk
 Metacello new
   repository: 'github://migchiel/NakedObjects';
-  baseline: 'RSNakedObjects';
+  baseline: 'FRLNakedObjects';
   load.
 ```
