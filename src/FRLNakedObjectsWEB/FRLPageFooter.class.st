@@ -11,8 +11,5 @@ FRLPageFooter >> renderContentOn: html [
 
 	super renderContentOn: html.
 	html
-		break;
-		break.
-	html
 		heading level: 1;with: ' FOOTER '
 ]

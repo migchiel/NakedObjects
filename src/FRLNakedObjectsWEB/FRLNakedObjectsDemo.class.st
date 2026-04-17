@@ -2,7 +2,9 @@ Class {
 	#name : 'FRLNakedObjectsDemo',
 	#superclass : 'WAComponent',
 	#instVars : [
-		'mainPage'
+		'header',
+		'footer',
+		'coreObjects'
 	],
 	#category : 'FRLNakedObjectsWEB-application',
 	#package : 'FRLNakedObjectsWEB',
@@ -24,20 +26,23 @@ FRLNakedObjectsDemo class >> initialize [
 { #category : 'hooks' }
 FRLNakedObjectsDemo >> children [
 
-	^ OrderedCollection with: mainPage 
+	^ OrderedCollection withAll: { header . coreObjects . footer }
 ]
 
 { #category : 'initialization' }
 FRLNakedObjectsDemo >> initialize [ 
 
 	super initialize.
-	mainPage := MainPage new
+	header := FRLPageHeader new.
+	coreObjects := FRLCoreObjects new.
+	footer := FRLPageFooter new
+	
 ]
 
 { #category : 'rendering' }
 FRLNakedObjectsDemo >> renderContentOn: html [
 
-	html render: mainPage 
+	self children do: [ :i | html render: i ] separatedBy: [ html horizontalRule ]
 ]
 
 { #category : 'updating' }
