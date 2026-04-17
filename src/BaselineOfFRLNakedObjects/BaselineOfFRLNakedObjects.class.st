@@ -1,12 +1,12 @@
 Class {
-	#name : 'BaselineOfRSNakedObjects',
+	#name : 'BaselineOfFRLNakedObjects',
 	#superclass : 'BaselineOf',
 	#category : 'BaselineOfFRLNakedObjects',
 	#package : 'BaselineOfFRLNakedObjects'
 }
 
 { #category : 'baselines' }
-BaselineOfRSNakedObjects >> baseline: spec [
+BaselineOfFRLNakedObjects >> baseline: spec [
 
 	<baseline>
 	spec for: #common do: [
@@ -24,7 +24,7 @@ BaselineOfRSNakedObjects >> baseline: spec [
 ]
 
 { #category : 'initialization' }
-BaselineOfRSNakedObjects >> setUpDependencies: spec [
+BaselineOfFRLNakedObjects >> setUpDependencies: spec [
 
 	spec
 		baseline: 'Seaside3' with: [
@@ -46,7 +46,7 @@ BaselineOfRSNakedObjects >> setUpDependencies: spec [
 ]
 
 { #category : 'as yet unclassified' }
-BaselineOfRSNakedObjects >> startSeasideAdaptorInPharo [
+BaselineOfFRLNakedObjects >> startSeasideAdaptorInPharo [
 
 	(Smalltalk globals at: #WAAdmin) defaultServerManager adaptors
 		ifEmpty: [
