@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'header',
 		'footer',
-		'coreObjects'
+		'coreObjects',
+		'circularMenu'
 	],
 	#category : 'NakedObjectsWEB-application',
 	#package : 'NakedObjectsWEB',
@@ -26,7 +27,7 @@ RsNakedObjectsDemo class >> initialize [
 { #category : 'hooks' }
 RsNakedObjectsDemo >> children [
 
-	^ OrderedCollection withAll: {coreObjects}
+	^ OrderedCollection withAll: {circularMenu}
 ]
 
 { #category : 'initialization' }
@@ -35,7 +36,8 @@ RsNakedObjectsDemo >> initialize [
 	super initialize.
 	header := RsPageHeader new.
 	coreObjects := RsCoreObjects new.
-	footer := RsPageFooter new
+	footer := RsPageFooter new.
+	circularMenu := RsCircularMenu new.
 	
 ]
 
@@ -57,9 +59,8 @@ RsNakedObjectsDemo >> updateRoot: anHtmlRoot [
 		beStylesheet;
 		addAll;
 		url: RsNakedObjectsWEBFileLibrary / 'nakedobjectsdemo.css';
-		yourself.
+		url: RsNakedObjectsWEBFileLibrary / 'circularmenu.css'.
 		anHtmlRoot script
 			beJavascript;
 			url: RsNakedObjectsWEBFileLibrary / 'nakedobjectsdemo.js'
-			yourself
 ]
