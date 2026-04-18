@@ -1,6 +1,13 @@
 Class {
 	#name : 'RsValue',
 	#superclass : 'RsNaked',
-	#category : 'NakedObjects',
-	#package : 'NakedObjects'
+	#category : 'NakedObjects-Core',
+	#package : 'NakedObjects',
+	#tag : 'Core'
 }
+
+{ #category : 'testing' }
+RsValue class >> isAbstract [ 
+
+	^ self == RsValue
+]

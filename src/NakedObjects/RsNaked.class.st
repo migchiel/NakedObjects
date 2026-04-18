@@ -11,3 +11,10 @@ RsNaked class >> isAbstract [
 
 	^ self == RsNaked
 ]
+
+{ #category : 'accessing' }
+RsNaked >> title [
+
+
+	^ self class name
+]
