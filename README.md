@@ -1,5 +1,12 @@
 # Pharo Naked Objects
-Experiments in the context of the NakedObjects architecture (http://www.nakedobjects.org/book/)
+
+
+## Experiments in the context of the NakedObjects architecture (http://www.nakedobjects.org/book/)
+
+
+## Soil is being leveraged for Object persistence (https://github.com/ApptiveGrid/Soil)
+
+## SeaSide is being used to build the WEB GUI (https://github.com/SeasideSt/Seaside)
 
 
 ## Installation
