@@ -5,3 +5,9 @@ Class {
 	#package : 'NakedObjects',
 	#tag : 'Core'
 }
+
+{ #category : 'testing' }
+RsNaked class >> isAbstract [ 
+
+	^ self == RsNaked
+]

@@ -1,5 +1,5 @@
 Class {
-	#name : 'RsProject',
+	#name : 'RsPeople',
 	#superclass : 'RsObject',
 	#category : 'NakedObjects-Core',
 	#package : 'NakedObjects',
@@ -7,7 +7,7 @@ Class {
 }
 
 { #category : 'accessing' }
-RsProject >> name [
+RsPeople >> name [
 
-	^ 'Projects'
+	^ 'People' 
 ]

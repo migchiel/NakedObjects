@@ -26,7 +26,7 @@ RsNakedObjectsDemo class >> initialize [
 { #category : 'hooks' }
 RsNakedObjectsDemo >> children [
 
-	^ OrderedCollection withAll: { header . coreObjects . footer }
+	^ OrderedCollection withAll: {coreObjects}
 ]
 
 { #category : 'initialization' }
@@ -42,7 +42,8 @@ RsNakedObjectsDemo >> initialize [
 { #category : 'rendering' }
 RsNakedObjectsDemo >> renderContentOn: html [
 
-	self children do: [ :i | html render: i ] separatedBy: [ html horizontalRule ]
+	self children do: [ :i | html render: i ]
+	
 ]
 
 { #category : 'updating' }
@@ -50,5 +51,15 @@ RsNakedObjectsDemo >> updateRoot: anHtmlRoot [
 
 	super updateRoot: anHtmlRoot.
 	anHtmlRoot beHtml5.
-	anHtmlRoot title: 'Naked Objects Demo'
+	anHtmlRoot title: 'Naked Objects Demo'.
+	anHtmlRoot link
+		type: 'text/css';
+		beStylesheet;
+		addAll;
+		url: RsNakedObjectsWEBFileLibrary / 'nakedobjectsdemo.css';
+		yourself.
+		anHtmlRoot script
+			beJavascript;
+			url: RsNakedObjectsWEBFileLibrary / 'nakedobjectsdemo.js'
+			yourself
 ]
