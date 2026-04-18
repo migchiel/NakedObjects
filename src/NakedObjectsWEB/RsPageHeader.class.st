@@ -1,13 +1,13 @@
 Class {
-	#name : 'FRLPageHeader',
+	#name : 'RsPageHeader',
 	#superclass : 'WAComponent',
-	#category : 'FRLNakedObjectsWEB-components',
-	#package : 'FRLNakedObjectsWEB',
+	#category : 'NakedObjectsWEB-components',
+	#package : 'NakedObjectsWEB',
 	#tag : 'components'
 }
 
 { #category : 'rendering' }
-FRLPageHeader >> renderContentOn: html [
+RsPageHeader >> renderContentOn: html [
 
 	super renderContentOn: html.
 	html heading level: 1;with: ' HEADER '

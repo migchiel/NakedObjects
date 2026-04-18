@@ -1,30 +1,30 @@
 Class {
-	#name : 'BaselineOfFRLNakedObjects',
+	#name : 'BaselineOfNakedObjects',
 	#superclass : 'BaselineOf',
-	#category : 'BaselineOfFRLNakedObjects',
-	#package : 'BaselineOfFRLNakedObjects'
+	#category : 'BaselineOfNakedObjects',
+	#package : 'BaselineOfNakedObjects'
 }
 
 { #category : 'baselines' }
-BaselineOfFRLNakedObjects >> baseline: spec [
+BaselineOfNakedObjects >> baseline: spec [
 
 	<baseline>
 	spec for: #common do: [
 			self setUpDependencies: spec.
 			spec
-				package: 'FRLNakedObjects' with: [
+				package: 'NakedObjects' with: [
 						spec
 							requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' );
 							postLoadDoIt: #startSeasideAdaptorInPharo ];
-				package: 'FRLNakedObjectsWEB'
+				package: 'NakedObjectsWEB'
 				with: [ spec requires: #( 'Seaside3' ) ];
-				package: 'FRLNakedObjects-Tests'
-				with: [ spec requires: #( 'FRLNakedObjects' ) ];
-				group: 'Core' with: #( 'FRLNakedObjects' ) ]
+				package: 'NakedObjects-Tests'
+				with: [ spec requires: #( 'NakedObjects' ) ];
+				group: 'Core' with: #( 'NakedObjects' ) ]
 ]
 
 { #category : 'initialization' }
-BaselineOfFRLNakedObjects >> setUpDependencies: spec [
+BaselineOfNakedObjects >> setUpDependencies: spec [
 
 	spec
 		baseline: 'Seaside3' with: [
@@ -50,7 +50,7 @@ BaselineOfFRLNakedObjects >> setUpDependencies: spec [
 ]
 
 { #category : 'as yet unclassified' }
-BaselineOfFRLNakedObjects >> startSeasideAdaptorInPharo [
+BaselineOfNakedObjects >> startSeasideAdaptorInPharo [
 
 	(Smalltalk globals at: #WAAdmin) defaultServerManager adaptors
 		ifEmpty: [

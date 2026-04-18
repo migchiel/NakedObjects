@@ -1,16 +1,16 @@
 Class {
-	#name : 'FRLCoreObjects',
+	#name : 'RsCoreObjects',
 	#superclass : 'WAComponent',
-	#category : 'FRLNakedObjectsWEB-components',
-	#package : 'FRLNakedObjectsWEB',
+	#category : 'NakedObjectsWEB-components',
+	#package : 'NakedObjectsWEB',
 	#tag : 'components'
 }
 
 { #category : 'rendering' }
-FRLCoreObjects >> renderContentOn: html [
+RsCoreObjects >> renderContentOn: html [
 
 	| rootClasses |
-	rootClasses := FRLObject allSubclasses.
+	rootClasses := RsObject allSubclasses.
 
 	super renderContentOn: html.
 	rootClasses allButLastDo: [ :object |

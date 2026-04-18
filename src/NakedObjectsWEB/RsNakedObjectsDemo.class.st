@@ -1,52 +1,52 @@
 Class {
-	#name : 'FRLNakedObjectsDemo',
+	#name : 'RsNakedObjectsDemo',
 	#superclass : 'WAComponent',
 	#instVars : [
 		'header',
 		'footer',
 		'coreObjects'
 	],
-	#category : 'FRLNakedObjectsWEB-application',
-	#package : 'FRLNakedObjectsWEB',
+	#category : 'NakedObjectsWEB-application',
+	#package : 'NakedObjectsWEB',
 	#tag : 'application'
 }
 
 { #category : 'testing' }
-FRLNakedObjectsDemo class >> canBeRoot [
+RsNakedObjectsDemo class >> canBeRoot [
    ^ true
 ]
 
 { #category : 'class initialization' }
-FRLNakedObjectsDemo class >> initialize [ 
+RsNakedObjectsDemo class >> initialize [ 
 
 	WAAdmin register: self asApplicationAt: 'NakedObjectsDemo'.
    
 ]
 
 { #category : 'hooks' }
-FRLNakedObjectsDemo >> children [
+RsNakedObjectsDemo >> children [
 
 	^ OrderedCollection withAll: { header . coreObjects . footer }
 ]
 
 { #category : 'initialization' }
-FRLNakedObjectsDemo >> initialize [ 
+RsNakedObjectsDemo >> initialize [ 
 
 	super initialize.
-	header := FRLPageHeader new.
-	coreObjects := FRLCoreObjects new.
-	footer := FRLPageFooter new
+	header := RsPageHeader new.
+	coreObjects := RsCoreObjects new.
+	footer := RsPageFooter new
 	
 ]
 
 { #category : 'rendering' }
-FRLNakedObjectsDemo >> renderContentOn: html [
+RsNakedObjectsDemo >> renderContentOn: html [
 
 	self children do: [ :i | html render: i ] separatedBy: [ html horizontalRule ]
 ]
 
 { #category : 'updating' }
-FRLNakedObjectsDemo >> updateRoot: anHtmlRoot [
+RsNakedObjectsDemo >> updateRoot: anHtmlRoot [
 
 	super updateRoot: anHtmlRoot.
 	anHtmlRoot beHtml5.
