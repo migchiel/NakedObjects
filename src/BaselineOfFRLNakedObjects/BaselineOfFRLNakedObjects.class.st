@@ -42,7 +42,11 @@ BaselineOfFRLNakedObjects >> setUpDependencies: spec [
 		baseline: 'NeoCSV' with: [
 			spec
 				loads: #( 'core' );
-				repository: 'github://svenvc/NeoCSV/repository' ]
+				repository: 'github://svenvc/NeoCSV/repository' ];
+		baseline: 'Soil' with: [ 
+			spec 
+				loads: #('Soil-Core');
+				repository: 'github://ApptiveGrid/Soil:v4/src' ]
 ]
 
 { #category : 'as yet unclassified' }
