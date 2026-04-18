@@ -1,6 +1,8 @@
-### Pharo Naked Objects
+# Pharo Naked Objects
 
-Experiments in the context of the NakedObjects architecture (http://www.nakedobjects.org/book/)
+
+## Experiments in the context of the NakedObjects architecture (http://www.nakedobjects.org/book/)
+
 
 ## Soil is being leveraged for Object persistence (https://github.com/ApptiveGrid/Soil)
 
