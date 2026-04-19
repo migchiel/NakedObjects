@@ -10,6 +10,7 @@ Class {
 RsCircularMenu >> renderContentOn: html [
 
 	super renderContentOn: html.
+	html heading: 'Test'.
 	html html: '<div class="container">
      <ul id="menu">
            <!-- open-menu id for click event -->
