@@ -34,10 +34,9 @@ RsNakedObjectsMain >> children [
 RsNakedObjectsMain >> initialize [ 
 
 	super initialize.
-	header := RsPageHeader new.
-	coreObjects := RsCoreObjects new.
-	footer := RsPageFooter new.
-	circularMenu := RsCircularMenu new.
+
+	coreObjects := RsCoreObjects new
+	
 	
 ]
 
@@ -53,17 +52,9 @@ RsNakedObjectsMain >> updateRoot: anHtmlRoot [
 	super updateRoot: anHtmlRoot.
 	anHtmlRoot beHtml5.
 	anHtmlRoot title: 'Naked Objects Demo'.
-	anHtmlRoot link
+	"anHtmlRoot link
 		type: 'text/css';
 		beStylesheet;
 		addAll;
-		url: RsNakedObjectsWEBFileLibrary / 'nakedobjectsdemo.css'.
-	anHtmlRoot link
-		type: 'text/css';
-		beStylesheet;
-		addAll;
-		url: RsNakedObjectsWEBFileLibrary / 'circularmenu.css'.
-	anHtmlRoot script
-		beJavascript;
-		url: RsNakedObjectsWEBFileLibrary / 'nakedobjectsdemo.js'
+		url: RsNakedObjectsWEBFileLibrary / 'nakedobjectsdemo.css'."
 ]
