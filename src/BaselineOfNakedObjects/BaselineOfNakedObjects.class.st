@@ -12,14 +12,13 @@ BaselineOfNakedObjects >> baseline: spec [
 	spec for: #common do: [
 			self setUpDependencies: spec.
 			spec
-				package: 'NakedObjects' with: [
-						spec
-							requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' );
-							postLoadDoIt: #startSeasideAdaptorInPharo ];
-				package: 'NakedObjectsWEB'
-				with: [ spec requires: #( 'Seaside3' ) ];
+				package: 'NakedObjects'
+				with: [ spec requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' 'Soil') ];
+				package: 'NakedObjectsDemo'
+				with: [ spec requires: #( NakedObjects ) ];
 				package: 'NakedObjects-Tests'
 				with: [ spec requires: #( 'NakedObjects' ) ];
+				group: 'Demo' with: #( 'NakedObjectsDemo' );
 				group: 'Core' with: #( 'NakedObjects' ) ]
 ]
 
@@ -27,10 +26,6 @@ BaselineOfNakedObjects >> baseline: spec [
 BaselineOfNakedObjects >> setUpDependencies: spec [
 
 	spec
-		baseline: 'Seaside3' with: [
-				spec
-					repository: 'github://SeasideSt/Seaside:master/repository';
-					loads: #( 'Core' 'Zinc' ) ];
 		baseline: 'ZTimestamp' with: [
 				spec
 					loads: #( 'core' );
@@ -47,13 +42,4 @@ BaselineOfNakedObjects >> setUpDependencies: spec [
 			spec 
 				loads: #('Soil-Core');
 				repository: 'github://ApptiveGrid/Soil:v4/src' ]
-]
-
-{ #category : 'as yet unclassified' }
-BaselineOfNakedObjects >> startSeasideAdaptorInPharo [
-
-	(Smalltalk globals at: #WAAdmin) defaultServerManager adaptors
-		ifEmpty: [
-				(Smalltalk globals includesKey: #ZnZincServerAdaptor) ifTrue: [
-					(Smalltalk globals at: #ZnZincServerAdaptor) startOn: 8080 ] ]
 ]
