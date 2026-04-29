@@ -14,12 +14,13 @@ BaselineOfNakedObjects >> baseline: spec [
 			spec
 				package: 'NakedObjects'
 				with: [ spec requires: #( 'ZTimestamp' 'NeoCSV' 'NeoJSON' 'Soil') ];
+				package: 'NakedObjectsGUI';
 				package: 'NakedObjectsDemo'
-				with: [ spec requires: #( NakedObjects ) ];
+				with: [ spec requires: #( 'NakedObjects' 'NakedObjectsGUI') ];
 				package: 'NakedObjects-Tests'
 				with: [ spec requires: #( 'NakedObjects' ) ];
 				group: 'Demo' with: #( 'NakedObjectsDemo' );
-				group: 'Core' with: #( 'NakedObjects' ) ]
+				group: 'Core' with: #( 'NakedObjects' 'NakedObjectsGUI' ) ]
 ]
 
 { #category : 'initialization' }
