@@ -1,9 +1,8 @@
 Class {
 	#name : 'RsPerson',
 	#superclass : 'RsObject',
-	#category : 'NakedObjectsDemo-Objects',
-	#package : 'NakedObjectsDemo',
-	#tag : 'Objects'
+	#category : 'NakedObjectsDemo',
+	#package : 'NakedObjectsDemo'
 }
 
 { #category : 'NakedCreate' }
