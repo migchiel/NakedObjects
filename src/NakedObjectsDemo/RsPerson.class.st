@@ -1,22 +1,23 @@
 Class {
 	#name : 'RsPerson',
 	#superclass : 'RsObject',
-	#category : 'NakedObjectsDemo',
-	#package : 'NakedObjectsDemo'
+	#category : 'NakedObjectsDemo-Objects',
+	#package : 'NakedObjectsDemo',
+	#tag : 'Objects'
 }
 
-{ #category : 'NakedCreate' }
+{ #category : 'api' }
 RsPerson >> create [ 
 
 ]
 
-{ #category : 'NakedDelete' }
+{ #category : 'api' }
 RsPerson >> delete [
 ]
 
-{ #category : 'NakedList' }
+{ #category : 'api' }
 RsPerson >> list [
-
+	<operation: 'list'>
 	^ #( 'Jim' 'John' 'Hank' )
 ]
 

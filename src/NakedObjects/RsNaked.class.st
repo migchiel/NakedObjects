@@ -23,9 +23,7 @@ RsNaked >> inspectionItems: aBuilder [
 				   evaluated: [ :each | each ];
 				   formatted: [ :key | StObjectPrinter asTruncatedTextFrom: key ];
 				   beSortable);
-		  items: (self class methods select: [ :m |
-				   m protocol name beginsWith: #'Naked' ] thenCollect: [ :m | m protocol name withoutPrefix: #'Naked']) asSet asArray;
-		  yourself
+		  items: (self class methods select: [ :m | m protocol name = #api ])
 ]
 
 { #category : 'accessing' }
