@@ -23,7 +23,13 @@ RsNaked >> inspectionItems: aBuilder [
 				   evaluated: [ :each | each ];
 				   formatted: [ :key | StObjectPrinter asTruncatedTextFrom: key ];
 				   beSortable);
-		  items: (self class methods select: [ :m | m protocol name = #api ])
+		  items: (self methodsWithProtocol: #api)
+]
+
+{ #category : 'as yet unclassified' }
+RsNaked >> methodsWithProtocol: aProtocol [
+
+	^ self class methods select: [ :m | m protocol name = aProtocol ]
 ]
 
 { #category : 'accessing' }
